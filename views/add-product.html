@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <nav class="main-header__nav">
+                <ul class="main-header__list">
+                    <li class="main-header__list--item">
+                    <a href="/admin/add-product">Add Product</a>
+                    </li>
+                    <li class="main-header__list--item">
+                        <a href="/">Products</a>
+                </li></ul>
+            </nav>
+        </header>
+        <main class="section">
+          <form action='/admin/product' method="POST" class="product__form">
+           <input type="text" name="title" class="Input" placeholder="enter Product name Here"/>
+           <button type="submit" class="Button">click</button>
+</form>
+</main>
+    </div>
+</body>
+</html>

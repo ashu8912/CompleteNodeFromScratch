@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="/css/main.css")
+        title #{docTitle}
+    body
+       header.main-header 
+           nav.main-header__nav
+             ul.main-header__list
+               li.main-header__list--item
+                 a(href="/admin/add-product") Add Product
+               li.main-header__list--item
+                 a(href="/") Products
+       main.main-section
+        if prods.length>0
+          .grid 
+            each product in prods
+             article.card.product
+              .card__header
+               .card__body
+                img(src="https://support.apple.com/library/content/dam/edam/applecare/images/en_US/homepod/watch-product-lockup-callout.png", alt="not found").card__image
+              .card__footer
+               .product__description
+                h3.product__title #{product.title}
+                p.product__body This is an amazing Watch 
+                 button.addToCart AddToCart 
+        else 
+          h1 Product Not Found     
+                  
+                                
